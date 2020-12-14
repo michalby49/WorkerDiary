@@ -1,7 +1,7 @@
 ﻿
 namespace WorkerDiary
 {
-    partial class AddEditEployee
+    partial class AddEditEmployee
     {
         /// <summary>
         /// Required designer variable.
@@ -40,13 +40,15 @@ namespace WorkerDiary
             this.tbId = new System.Windows.Forms.TextBox();
             this.tbFirstName = new System.Windows.Forms.TextBox();
             this.tbLastName = new System.Windows.Forms.TextBox();
-            this.tbFullTime = new System.Windows.Forms.TextBox();
+            this.tbJob = new System.Windows.Forms.TextBox();
             this.tbPhoneNumber = new System.Windows.Forms.TextBox();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.dtpDateOfEmployment = new System.Windows.Forms.DateTimePicker();
             this.rtbCommend = new System.Windows.Forms.RichTextBox();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.cbbShift = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -115,7 +117,7 @@ namespace WorkerDiary
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(21, 197);
+            this.label9.Location = new System.Drawing.Point(21, 224);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 15;
@@ -125,54 +127,55 @@ namespace WorkerDiary
             // 
             this.tbId.Location = new System.Drawing.Point(120, 13);
             this.tbId.Name = "tbId";
-            this.tbId.Size = new System.Drawing.Size(199, 20);
+            this.tbId.ReadOnly = true;
+            this.tbId.Size = new System.Drawing.Size(200, 20);
             this.tbId.TabIndex = 16;
             // 
             // tbFirstName
             // 
             this.tbFirstName.Location = new System.Drawing.Point(120, 39);
             this.tbFirstName.Name = "tbFirstName";
-            this.tbFirstName.Size = new System.Drawing.Size(199, 20);
+            this.tbFirstName.Size = new System.Drawing.Size(200, 20);
             this.tbFirstName.TabIndex = 17;
             // 
             // tbLastName
             // 
             this.tbLastName.Location = new System.Drawing.Point(120, 65);
             this.tbLastName.Name = "tbLastName";
-            this.tbLastName.Size = new System.Drawing.Size(199, 20);
+            this.tbLastName.Size = new System.Drawing.Size(200, 20);
             this.tbLastName.TabIndex = 19;
             // 
-            // tbFullTime
+            // tbJob
             // 
-            this.tbFullTime.Location = new System.Drawing.Point(119, 91);
-            this.tbFullTime.Name = "tbFullTime";
-            this.tbFullTime.Size = new System.Drawing.Size(199, 20);
-            this.tbFullTime.TabIndex = 21;
+            this.tbJob.Location = new System.Drawing.Point(120, 90);
+            this.tbJob.Name = "tbJob";
+            this.tbJob.Size = new System.Drawing.Size(200, 20);
+            this.tbJob.TabIndex = 21;
             // 
             // tbPhoneNumber
             // 
-            this.tbPhoneNumber.Location = new System.Drawing.Point(119, 116);
+            this.tbPhoneNumber.Location = new System.Drawing.Point(120, 116);
             this.tbPhoneNumber.Name = "tbPhoneNumber";
-            this.tbPhoneNumber.Size = new System.Drawing.Size(199, 20);
+            this.tbPhoneNumber.Size = new System.Drawing.Size(200, 20);
             this.tbPhoneNumber.TabIndex = 23;
             // 
             // tbEmail
             // 
-            this.tbEmail.Location = new System.Drawing.Point(119, 142);
+            this.tbEmail.Location = new System.Drawing.Point(120, 142);
             this.tbEmail.Name = "tbEmail";
-            this.tbEmail.Size = new System.Drawing.Size(199, 20);
+            this.tbEmail.Size = new System.Drawing.Size(200, 20);
             this.tbEmail.TabIndex = 25;
             // 
             // dtpDateOfEmployment
             // 
-            this.dtpDateOfEmployment.Location = new System.Drawing.Point(118, 168);
+            this.dtpDateOfEmployment.Location = new System.Drawing.Point(120, 168);
             this.dtpDateOfEmployment.Name = "dtpDateOfEmployment";
             this.dtpDateOfEmployment.Size = new System.Drawing.Size(200, 20);
             this.dtpDateOfEmployment.TabIndex = 31;
             // 
             // rtbCommend
             // 
-            this.rtbCommend.Location = new System.Drawing.Point(118, 194);
+            this.rtbCommend.Location = new System.Drawing.Point(118, 221);
             this.rtbCommend.Name = "rtbCommend";
             this.rtbCommend.Size = new System.Drawing.Size(201, 138);
             this.rtbCommend.TabIndex = 32;
@@ -180,34 +183,55 @@ namespace WorkerDiary
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(243, 338);
+            this.btnConfirm.Location = new System.Drawing.Point(244, 365);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 33;
             this.btnConfirm.Text = "Zatwierdz";
             this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(118, 338);
+            this.btnCancel.Location = new System.Drawing.Point(118, 365);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 34;
             this.btnCancel.Text = "Anuluj";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // AddEditEployee
+            // cbbShift
+            // 
+            this.cbbShift.FormattingEnabled = true;
+            this.cbbShift.Location = new System.Drawing.Point(120, 194);
+            this.cbbShift.Name = "cbbShift";
+            this.cbbShift.Size = new System.Drawing.Size(200, 21);
+            this.cbbShift.TabIndex = 35;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(21, 197);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 13);
+            this.label8.TabIndex = 36;
+            this.label8.Text = "Zmiana";
+            // 
+            // AddEditEmployee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(333, 374);
+            this.ClientSize = new System.Drawing.Size(334, 402);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.cbbShift);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.rtbCommend);
             this.Controls.Add(this.dtpDateOfEmployment);
             this.Controls.Add(this.tbEmail);
             this.Controls.Add(this.tbPhoneNumber);
-            this.Controls.Add(this.tbFullTime);
+            this.Controls.Add(this.tbJob);
             this.Controls.Add(this.tbLastName);
             this.Controls.Add(this.tbFirstName);
             this.Controls.Add(this.tbId);
@@ -219,7 +243,7 @@ namespace WorkerDiary
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "AddEditEployee";
+            this.Name = "AddEditEmployee";
             this.Text = "Form2";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -239,12 +263,14 @@ namespace WorkerDiary
         private System.Windows.Forms.TextBox tbId;
         private System.Windows.Forms.TextBox tbFirstName;
         private System.Windows.Forms.TextBox tbLastName;
-        private System.Windows.Forms.TextBox tbFullTime;
+        private System.Windows.Forms.TextBox tbJob;
         private System.Windows.Forms.TextBox tbPhoneNumber;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.DateTimePicker dtpDateOfEmployment;
         private System.Windows.Forms.RichTextBox rtbCommend;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox cbbShift;
+        private System.Windows.Forms.Label label8;
     }
 }

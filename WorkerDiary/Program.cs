@@ -8,6 +8,8 @@ namespace WorkerDiary
 {
     static class Program
     {
+        public static string FilePath = $@"{Environment.CurrentDirectory}\Employee.txt";
+        public static List<string> Shift = new List<string>() { "D1", "D2", "N1", "N2", };
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
         /// </summary>

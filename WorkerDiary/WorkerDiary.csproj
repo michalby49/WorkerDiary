@@ -47,22 +47,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Employee.cs" />
+    <Compile Include="FileHelper.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddEditEployee.cs">
+    <Compile Include="AddEditEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddEditEployee.Designer.cs">
-      <DependentUpon>AddEditEployee.cs</DependentUpon>
+    <Compile Include="AddEditEmployee.Designer.cs">
+      <DependentUpon>AddEditEmployee.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AddEditEployee.resx">
-      <DependentUpon>AddEditEployee.cs</DependentUpon>
+    <EmbeddedResource Include="AddEditEmployee.resx">
+      <DependentUpon>AddEditEmployee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

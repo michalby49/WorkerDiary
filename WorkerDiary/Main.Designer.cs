@@ -29,24 +29,30 @@ namespace WorkerDiary
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvDiary = new System.Windows.Forms.DataGridView();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnRefreh = new System.Windows.Forms.Button();
-            this.ccbFullTime = new System.Windows.Forms.ComboBox();
+            this.cbbJob = new System.Windows.Forms.ComboBox();
             this.btnDismiss = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiary)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvDiary
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 43);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 395);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvDiary.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvDiary.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDiary.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.dgvDiary.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDiary.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvDiary.Location = new System.Drawing.Point(12, 43);
+            this.dgvDiary.Name = "dgvDiary";
+            this.dgvDiary.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDiary.Size = new System.Drawing.Size(1042, 395);
+            this.dgvDiary.TabIndex = 0;
             // 
             // btnAdd
             // 
@@ -56,6 +62,7 @@ namespace WorkerDiary
             this.btnAdd.TabIndex = 1;
             this.btnAdd.Text = "Dodaj";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdit
             // 
@@ -65,6 +72,7 @@ namespace WorkerDiary
             this.btnEdit.TabIndex = 2;
             this.btnEdit.Text = "Edytuj";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnDelete
             // 
@@ -74,6 +82,7 @@ namespace WorkerDiary
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Usuń";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnRefreh
             // 
@@ -83,14 +92,15 @@ namespace WorkerDiary
             this.btnRefreh.TabIndex = 4;
             this.btnRefreh.Text = "Odświerz";
             this.btnRefreh.UseVisualStyleBackColor = true;
+            this.btnRefreh.Click += new System.EventHandler(this.btnRefreh_Click);
             // 
-            // ccbFullTime
+            // cbbJob
             // 
-            this.ccbFullTime.FormattingEnabled = true;
-            this.ccbFullTime.Location = new System.Drawing.Point(417, 12);
-            this.ccbFullTime.Name = "ccbFullTime";
-            this.ccbFullTime.Size = new System.Drawing.Size(121, 21);
-            this.ccbFullTime.TabIndex = 5;
+            this.cbbJob.FormattingEnabled = true;
+            this.cbbJob.Location = new System.Drawing.Point(417, 12);
+            this.cbbJob.Name = "cbbJob";
+            this.cbbJob.Size = new System.Drawing.Size(121, 21);
+            this.cbbJob.TabIndex = 5;
             // 
             // btnDismiss
             // 
@@ -100,34 +110,35 @@ namespace WorkerDiary
             this.btnDismiss.TabIndex = 6;
             this.btnDismiss.Text = "Zwolnij";
             this.btnDismiss.UseVisualStyleBackColor = true;
+            this.btnDismiss.Click += new System.EventHandler(this.btnDismiss_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1066, 450);
             this.Controls.Add(this.btnDismiss);
-            this.Controls.Add(this.ccbFullTime);
+            this.Controls.Add(this.cbbJob);
             this.Controls.Add(this.btnRefreh);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvDiary);
             this.Name = "Main";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDiary)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvDiary;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnRefreh;
-        private System.Windows.Forms.ComboBox ccbFullTime;
+        private System.Windows.Forms.ComboBox cbbJob;
         private System.Windows.Forms.Button btnDismiss;
     }
 }
