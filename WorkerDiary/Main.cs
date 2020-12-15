@@ -1,11 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using WorkerDiary.Properties;
 
@@ -29,10 +24,10 @@ namespace WorkerDiary
         }
         public Main()
         {
-         
             InitializeComponent();
-
+            
             DiaryRefresh(allShift);
+
             SetColumnsHeader();
 
             SelectShift(Program.Shift);
@@ -153,11 +148,12 @@ namespace WorkerDiary
         }
 
         private void DismissEmployee(int id)
-        {            
-            //var employees = fileHelper.DeserializeFromFile();
-            //employees = employees.Where(x => x.Id == id).Select(x => x.Dismiss = true);
-
-            //fileHelper.SerializeToFile(employees);
+        {
+            var employees = fileHelper.DeserializeFromFile();
+            var employeeToDismiss = employees.First(x => x.Id == id);
+            employeeToDismiss.Dismiss = true;
+            fileHelper.SerializeToFile(employees);
+            DiaryRefresh(allShift);
         }
 
         private void Main_FormClosed(object sender, FormClosedEventArgs e)

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace WorkerDiary
 {
     public class Employee
@@ -18,6 +13,5 @@ namespace WorkerDiary
         public string DateOfEmploment { get; set; }
         public string Commend { get; set; }
         public bool Dismiss { get; set; }
-        
     }
 }

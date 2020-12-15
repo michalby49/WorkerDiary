@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WorkerDiary
@@ -61,12 +57,10 @@ namespace WorkerDiary
             cbbShift.SelectedItem = _employee.Shift;
 
         }
-
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Close();
         }
-
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             var employees = fileHelper.DeserializeFromFile();
@@ -82,13 +76,11 @@ namespace WorkerDiary
 
             Close();
         }
-
         private void AssingIdToNewStudent(List<Employee> employees)
         {
             var employeesWithHighestId = employees.OrderByDescending(x => x.Id).FirstOrDefault();
             _employeeId = employeesWithHighestId == null ? 1 : employeesWithHighestId.Id + 1;
         }
-
         private void AddNewUserToList(List<Employee> employees)
         {
             var employee = new Employee()
@@ -101,8 +93,7 @@ namespace WorkerDiary
                 Email = tbEmail.Text,
                 DateOfEmploment = dtpDateOfEmployment.Text,
                 Commend = rtbCommend.Text,
-                Shift = cbbShift.Text
-                
+                Shift = cbbShift.Text  
             };
             employees.Add(employee);
         }
