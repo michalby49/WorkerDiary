@@ -90,7 +90,7 @@ namespace WorkerDiary
             this.btnRefreh.Name = "btnRefreh";
             this.btnRefreh.Size = new System.Drawing.Size(75, 23);
             this.btnRefreh.TabIndex = 4;
-            this.btnRefreh.Text = "Odświerz";
+            this.btnRefreh.Text = "Odśwież";
             this.btnRefreh.UseVisualStyleBackColor = true;
             this.btnRefreh.Click += new System.EventHandler(this.btnRefreh_Click);
             // 
@@ -126,6 +126,7 @@ namespace WorkerDiary
             this.Controls.Add(this.dgvDiary);
             this.Name = "Main";
             this.Text = "Form1";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDiary)).EndInit();
             this.ResumeLayout(false);
 

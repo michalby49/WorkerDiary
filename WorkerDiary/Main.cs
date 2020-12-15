@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WorkerDiary.Properties;
 
 namespace WorkerDiary
 {
@@ -14,6 +15,18 @@ namespace WorkerDiary
     {
         private FileHelper<List<Employee>> fileHelper = new FileHelper<List<Employee>>(Program.FilePath);
         private static string allShift = "Wszystkie zmiany";
+
+        public bool IsMaximize
+        {
+            get
+            {
+                return Settings.Default.IsMaximize;
+            }
+            set
+            {
+                Settings.Default.IsMaximize = value;
+            }
+        }
         public Main()
         {
          
@@ -114,7 +127,7 @@ namespace WorkerDiary
 
         private void btnRefreh_Click(object sender, EventArgs e)
         {
-            DiaryRefresh(allShift);
+            DiaryRefresh(cbbJob.Text);
         }
 
         private void btnDismiss_Click(object sender, EventArgs e)
@@ -140,13 +153,21 @@ namespace WorkerDiary
         }
 
         private void DismissEmployee(int id)
-        {
-            
-            var employees = fileHelper.DeserializeFromFile();
-            
-            
+        {            
+            //var employees = fileHelper.DeserializeFromFile();
+            //employees = employees.Where(x => x.Id == id).Select(x => x.Dismiss = true);
 
             //fileHelper.SerializeToFile(employees);
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if (WindowState == FormWindowState.Maximized)
+                IsMaximize = true;
+            else
+                IsMaximize = false;
+
+            Settings.Default.Save();
         }
     }
 }
